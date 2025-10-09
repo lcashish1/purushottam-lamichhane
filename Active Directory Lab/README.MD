@@ -41,7 +41,8 @@ The lab includes:
 3. Configured DNS to point to its own IP.  
 4. Verified connectivity with client machines.  
 
-📸 **Screenshot:** Server Network Setup
+📸 **Screenshot:** Server Network Setup  
+![Server Network Setup](Project%20Git/server-network-setup.png)
 
 ---
 
@@ -51,7 +52,7 @@ The lab includes:
 3. Restarted the server after configuration.  
 
 📸 **Screenshot:** AD DS Installation
-
+![AD DS Installation](Project%20Git/ad-installation.png)
 ---
 
 ## 🧑‍💻 Step 3: Create Organizational Units (OUs)
@@ -64,7 +65,7 @@ Created OUs to logically organize users and computers for better management.
 | **Admin** | System administrators |
 
 📸 **Screenshot:** OU Structure in Active Directory
-
+![OU Structure](Project%20Git/ou-structure.png)
 ---
 
 ## 👥 Step 4: Create Users and Groups
@@ -72,7 +73,7 @@ Created OUs to logically organize users and computers for better management.
 - Assigned users to groups such as `Staff_Group`, `IT_Group`, and `Admin_group`.  
 
 📸 **Screenshot:** User Creation and Group Assignment
-
+![User Creation](Project%20Git/user-creation.png)
 ---
 
 ## 🖥️ Step 5: Join Client Computer to Domain
@@ -86,7 +87,7 @@ nslookup lcashish1.local
 ✅ Output confirmed successful DNS resolution.  
 
 📸 **Screenshots:** DNS Verification and Domain Join Success
-
+![Domain Join](Project%20Git/domain-join-success.png)
 ---
 
 ## ⚙️ Step 6: Group Policy Configuration
@@ -99,7 +100,7 @@ Applied several GPOs to control user environments and enhance security.
 | Map Network Drive | LCASHISH1.local | User → Preferences → Drive Maps | \\LCASHISH1\SharedData | Drive Z: mapped successfully |
 
 📸 **Screenshots:** GPO Settings and Results
-
+![GPO Settings](Project%20Git/gpo-wallpaper.png)
 ---
 
 ## 🗂️ Step 7: File Sharing & Permissions
@@ -110,7 +111,7 @@ Applied several GPOs to control user environments and enhance security.
 3. Automatically mapped drives using Group Policy.  
 
 📸 **Screenshot:** File Sharing Configuration
-
+![File Sharing](Project%20Git/shared-folder-permissions.png)
 ---
 
 ## 🧰 Step 8: Backup & Maintenance
@@ -118,7 +119,7 @@ Used **Windows Server Backup** to perform regular system state and AD backups.
 Verified backups through event logs and recovery console.  
 
 📸 **Screenshot:** Backup Success
-
+![Backup Verification](Project%20Git/backup-success.png)
 ---
 
 ## 🧠 Learning Outcomes
@@ -140,16 +141,19 @@ Through this project, I gained hands-on experience with:
 
 ## 📸 Screenshot Summary
 
+## 📸 Screenshot Summary
+
 | Description | Screenshot |
 |--------------|-------------|
-| Server Network Setup |Project%20Git/server-network-setup.png |
-| AD DS Installation | Project%20Git/ad-installation.png |
-| OU Structure | Project%20Git/ou-structure.png |
-| User Creation | Project%20Git/user-creation.png |
-| Domain Join | Project%20Git/domain-join-success.png |
-| GPO Applied | Project%20Git/gpo-wallpaper.png |
-| File Sharing | Project%20Git/shared-folder-permissions.png |
-| Backup Verification | Project%20Git/backup-success.png |
+| Server Network Setup | ![Server Network Setup](Project%20Git/server-network-setup.png) |
+| AD DS Installation | ![AD DS Installation](Project%20Git/ad-installation.png) |
+| OU Structure | ![OU Structure](Project%20Git/ou-structure.png) |
+| User Creation | ![User Creation](Project%20Git/user-creation.png) |
+| Domain Join | ![Domain Join](Project%20Git/domain-join-success.png) |
+| GPO Applied | ![GPO Applied](Project%20Git/gpo-wallpaper.png) |
+| File Sharing | ![File Sharing](Project%20Git/shared-folder-permissions.png) |
+| Backup Verification | ![Backup Verification](Project%20Git/backup-success.png) |
+
 
 ---
 
