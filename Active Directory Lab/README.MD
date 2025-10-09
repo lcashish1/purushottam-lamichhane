@@ -142,14 +142,14 @@ Through this project, I gained hands-on experience with:
 
 | Description | Screenshot |
 |--------------|-------------|
-| Server Network Setup | server-network-setup.png |
-| AD DS Installation | ad-installation.png |
-| OU Structure | ou-structure.png |
-| User Creation | user-creation.png |
-| Domain Join | domain-join-success.png |
-| GPO Applied | gpo-wallpaper.png |
-| File Sharing | shared-folder-permissions.png |
-| Backup Verification | backup-success.png |
+| Server Network Setup |Project%20Git/server-network-setup.png |
+| AD DS Installation | Project%20Git/ad-installation.png |
+| OU Structure | Project%20Git/ou-structure.png |
+| User Creation | Project%20Git/user-creation.png |
+| Domain Join | Project%20Git/domain-join-success.png |
+| GPO Applied | Project%20Git/gpo-wallpaper.png |
+| File Sharing | Project%20Git/shared-folder-permissions.png |
+| Backup Verification | Project%20Git/backup-success.png |
 
 ---
 
