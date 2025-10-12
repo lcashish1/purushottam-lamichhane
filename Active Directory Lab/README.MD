@@ -163,16 +163,3 @@ Through this project, I gained hands-on experience with:
 **Year:** 2025  
 
 ⭐ *If you found this project helpful, don’t forget to star it on GitHub!*
-
----
-
-## 🧱 GitHub “About” Section (for your repository)
-
-**Description:**  
-Hands-on Active Directory home lab setup using Windows Server 2022 and Windows 10. Includes domain creation, OU structure, GPO management, file sharing, and backup configuration — built for IT learning and system administration practice.
-
-**Topics / Tags:**  
-`active-directory`, `windows-server`, `system-administration`, `networking`, `dns`, `gpo`, `virtualization`, `home-lab`, `it-support`, `learning-project`  
-
-**Visibility:** Public  
-**License:** MIT
