@@ -25,7 +25,7 @@ Currently enhancing my hands-on skills through personal labs and real-world simu
 ---
 
 ## 🧪 Projects & Labs
-- 🖥️ **Active Directory Lab** – Built and managed a Windows Server 2022 domain environment with user accounts, groups, and policies.  
+- 🖥️ [**Active Directory Lab** ](https://github.com/lcashish1/purushottam-lamichhane/tree/main/Active%20Directory%20Lab) – Built and managed a Windows Server 2022 domain environment with user accounts, groups, and policies.  
 - 🌐 **Home Network Setup** – Designed and simulated a secure home network with routers, switches, and VLANs using Cisco Packet Tracer.  
 - 📡 **Wireshark Traffic Analysis** – Captured and analyzed packets to identify network patterns and troubleshoot performance issues.  
 - ⚙️ **Python Automation Script** – Automated system monitoring and repetitive admin tasks for improved efficiency.
