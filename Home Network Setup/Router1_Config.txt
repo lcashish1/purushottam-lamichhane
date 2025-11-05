@@ -1,0 +1,167 @@
+Building configuration...
+
+Current configuration : 3143 bytes
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+ip dhcp excluded-address 192.168.1.0 192.168.1.3
+ip dhcp excluded-address 192.168.1.16 192.168.1.20
+ip dhcp excluded-address 192.168.1.32 192.168.1.35
+ip dhcp excluded-address 192.168.1.40 192.168.1.43
+ip dhcp excluded-address 192.168.1.48 192.168.1.51
+!
+ip dhcp pool SALES
+ network 192.168.1.0 255.255.255.240
+ default-router 192.168.1.1
+ dns-server 192.168.1.20
+ domain-name sales.test.com
+ip dhcp pool IT
+ network 192.168.1.16 255.255.255.240
+ default-router 192.168.1.17
+ dns-server 192.168.1.20
+ domain-name it.test.com
+ip dhcp pool ADMIN
+ network 192.168.1.32 255.255.255.248
+ default-router 192.168.1.33
+ dns-server 192.168.1.20
+ domain-name admin.test.com
+ip dhcp pool HR
+ network 192.168.1.40 255.255.255.248
+ default-router 192.168.1.41
+ dns-server 192.168.1.20
+ domain-name hr.test.com
+ip dhcp pool GUEST
+ network 192.168.1.48 255.255.255.248
+ default-router 192.168.1.49
+ dns-server 192.168.1.50
+ domain-name guest.test.com
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ ip nat inside
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.1.2 255.255.255.240
+ ip access-group VLAN_ACCESS_CONTROL in
+ ip nat inside
+ standby 1 ip 192.168.1.1
+ standby 1 priority 110
+ standby 1 preempt
+!
+interface GigabitEthernet0/0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.1.18 255.255.255.240
+ ip access-group VLAN_ACCESS_CONTROL in
+ ip nat inside
+ standby 1 ip 192.168.1.17
+ standby 1 priority 110
+ standby 1 preempt
+!
+interface GigabitEthernet0/0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.1.34 255.255.255.248
+ ip access-group VLAN_ACCESS_CONTROL in
+ ip nat inside
+ standby 1 ip 192.168.1.33
+ standby 1 priority 110
+ standby 1 preempt
+!
+interface GigabitEthernet0/0/0.40
+ encapsulation dot1Q 40
+ ip address 192.168.1.42 255.255.255.248
+ ip access-group VLAN_ACCESS_CONTROL in
+ ip nat inside
+ standby 1 ip 192.168.1.41
+ standby 1 priority 110
+ standby 1 preempt
+!
+interface GigabitEthernet0/0/0.50
+ encapsulation dot1Q 50
+ ip address 192.168.1.50 255.255.255.248
+ ip access-group VLAN_ACCESS_CONTROL in
+ ip nat inside
+ standby 1 ip 192.168.1.49
+ standby 1 priority 110
+ standby 1 preempt
+!
+interface GigabitEthernet0/0/1
+ ip address 203.10.1.1 255.255.255.252
+ ip nat outside
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/2
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 0090.2b4a.4601
+ no ip address
+!
+ip nat inside source list 1 interface GigabitEthernet0/0/1 overload
+ip classless
+ip route 0.0.0.0 0.0.0.0 203.10.1.2 
+ip route 1.1.1.1 255.255.255.255 192.168.1.3 
+ip route 1.1.1.1 255.255.255.255 162.168.1.19 
+ip route 16.119.1.0 255.255.255.252 192.168.1.3 
+ip route 16.119.1.0 255.255.255.252 192.168.1.19 
+!
+ip flow-export version 9
+!
+!
+access-list 1 permit 192.168.1.0 0.0.0.255
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
