@@ -42,7 +42,7 @@ The lab includes:
 4. Verified connectivity with client machines.  
 
 📸 **Screenshot:** Server Network Setup  
-![Server Network Setup](Project%20Git/server-network-setup.png)
+![Server Network Setup](Project%20Git/Server%20Network%20Setup.png)
 
 ---
 
@@ -118,8 +118,7 @@ Applied several GPOs to control user environments and enhance security.
 Used **Windows Server Backup** to perform regular system state and AD backups.  
 Verified backups through event logs and recovery console.  
 
-📸 **Screenshot:** Backup Success
-![Backup Verification](Project%20Git/backup-success.png)
+
 ---
 
 ## 🧠 Learning Outcomes
@@ -141,18 +140,16 @@ Through this project, I gained hands-on experience with:
 
 ## 📸 Screenshot Summary
 
-## 📸 Screenshot Summary
-
 | Description | Screenshot |
 |--------------|-------------|
-| Server Network Setup | ![Server Network Setup](Project%20Git/server-network-setup.png) |
+| Server Network Setup | ![Server Network Setup](Project%20Git/Server%20Network%20Setup.png) |
 | AD DS Installation | ![AD DS Installation](Project%20Git/ad-installation.png) |
 | OU Structure | ![OU Structure](Project%20Git/ou-structure.png) |
 | User Creation | ![User Creation](Project%20Git/user-creation.png) |
 | Domain Join | ![Domain Join](Project%20Git/domain-join-success.png) |
 | GPO Applied | ![GPO Applied](Project%20Git/gpo-wallpaper.png) |
 | File Sharing | ![File Sharing](Project%20Git/shared-folder-permissions.png) |
-| Backup Verification | ![Backup Verification](Project%20Git/backup-success.png) |
+
 
 
 ---
