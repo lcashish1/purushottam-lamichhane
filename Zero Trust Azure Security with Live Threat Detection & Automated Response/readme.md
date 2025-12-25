@@ -13,8 +13,8 @@ High-Level Design
 •	Automated response using Logic Apps
 Architecture Diagram
 📌 Zero Trust Azure Security Architecture Diagram
-![](Project%20Git/Architecture.jpg)
 
+![](Project%20git/Architecture.png)
 ________________________________________
 ## 🧑‍💼 Identity & Access Layer
 Azure Entra ID (Azure AD)
@@ -54,21 +54,21 @@ o	DB port access only from App-Subnet
 •	Purpose:
 o	Simulated attack traffic for SOC testing
 
-![](Project%20Git/Images1.png)
-![](Project%20Git/Images2.png)
+![](Project%20git/Images1.png)
+![](Project%20git/Images2.png)
 ________________________________________
 ## 🛡️ Security Controls
 Network Security Groups (NSGs)
 •	Enforced east–west and north–south traffic control
 •	Default deny-all policy
 •	Dynamic deny rules created during automated response
-![](Project%20Git/Images3.png)
+![](Project%20git/Images3.png)
 
 Microsoft Defender for Cloud
 •	Secure Score monitoring
 •	VM threat protection
 •	Security posture recommendations
-![](Project%20Git/Defender-for-cloud.png)
+![](Project%20git/Defender-for-cloud.png)
 ________________________________________
 ## 👁️ Monitoring & SOC Layer
 Log Analytics Workspace
@@ -82,8 +82,8 @@ Connected data sources:
 •	Security Events (Linux Syslog)
 •	Defender for Cloud alerts
 📊 All VM logs are ingested using Azure Monitor Agent (AMA) and Data Collection Rules (DCRs).
-![](Project%20Git/Sentinel.png)
-![](Project%20Git/Sentinel-log.png)
+![](Project%20git/Sentinel.png)
+![](Project%20git/Sentinel-log.png)
 ________________________________________
 ## 🧪 Attack Simulation
 SSH Brute-Force Test
@@ -109,9 +109,9 @@ Syslog
 Outcome
 •	Sentinel incident is automatically created
 •	Email alert is sent to SOC analyst
-![](Project%20Git/Dectection-rule.png)
-![](Project%20Git/Dectection-rule2.png)
-![](Project%20Git/Dectection-rule3.png)
+![](Project%20git/Dectection-rule.png)
+![](Project%20git/Dectection-rule2.png)
+![](Project%20git/Dectection-rule3.png)
 ________________________________________
 ## 🤖 PART 2: Automated Response (SOAR)
 Logic App Playbook
@@ -127,8 +127,8 @@ Result
 •	Attacker IP is immediately blocked at the network layer
 •	Prevents further brute-force attempts
 
-![](Project%20Git/Dectection-rule4.png)
-![](Project%20Git/Dectection-rule5.png)
+![](Project%20git/Dectection-rule4.png)
+![](Project%20git/Dectection-rule5.png)
 ________________________________________
 ## 🔁 MITRE ATT&CK Mapping
 Technique	ID
@@ -137,8 +137,8 @@ Network Scanning	T1046
 Lateral Movement	TA0008
 ________________________________________
 ## 📸 Screenshots (Evidence)
-![](Project%20Git/Soc.png)
-![](Project%20Git/Logic-app.png)
+![](Project%20git/Soc.png)
+![](Project%20git/Logic-app.png)
 ________________________________________
 ## 🎯 Skills Demonstrated
 •	Azure Networking & NSGs
