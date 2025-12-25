@@ -29,31 +29,33 @@ o	Test User </br>
 🔐 All Azure resources are accessed using identity-based access control principles.
 ________________________________________
 ## 🌐 Networking Layer
+
 Virtual Network
 *	VNet: ZT-VNet (10.0.0.0/16)
 </br>Subnet Design
-</br>1️⃣ Public Subnet
-*	Public-Subnet (10.0.1.0/24)
-*	Resources:
+
+* 1️⃣ Public Subnet
+</br>	Public-Subnet (10.0.1.0/24)
+</br>Resources:
 </br>o	JumpVM (Windows)
-*	Security:
+</br>Security:
 </br>o	NSG-Public
 </br>o	Restricted inbound access from trusted IP only
-</br>2️⃣ Application Subnet
-*	App-Subnet (10.0.2.0/24)
-*	Resources:
+* 2️⃣ Application Subnet
+</br>App-Subnet (10.0.2.0/24)
+</br>Resources:
 </br>o	AppVM (Linux)
-*	Security:
+</br>Security:
 </br>o	NSG-App
 </br>o	SSH allowed only from Public-Subnet
-</br>3️⃣ Database Subnet (Architecture design)
-*	DB-Subnet (10.0.3.0/24)
-*	Security:
+* 3️⃣ Database Subnet (Architecture design)
+</br>DB-Subnet (10.0.3.0/24)
+</br>Security:
 </br>o	NSG-DB
 </br>o	DB port access only from App-Subnet
-</br>4️⃣ Attacker Simulation Subnet (Architecture design)
-*	Attacker-Subnet (10.0.4.0/24)
-*	Purpose:
+* 4️⃣ Attacker Simulation Subnet (Architecture design)
+</br>Attacker-Subnet (10.0.4.0/24)
+</br>Purpose:
 </br>o	Simulated attack traffic for SOC testing
 
 ![](Project%20git/images1.png)
@@ -140,7 +142,6 @@ Lateral Movement	TA0008</br>
 ________________________________________
 ## 📸 Screenshots (Evidence)
 ![](Project%20git/SOC.png)
-![](Project%20git/logic-app.png)
 ________________________________________
 ## 🎯 Skills Demonstrated
 *	Azure Networking & NSGs
