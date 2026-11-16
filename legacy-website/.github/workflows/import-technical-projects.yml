@@ -1,0 +1,72 @@
+name: Import missing technical project files
+
+# Original four lab folders were migrated on 2026-11-16.
+# This opt-in maintenance workflow now fills only missing files, protecting
+# any documentation and fixes made in the destination after the migration.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-missing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+        with:
+          path: website
+          persist-credentials: true
+
+      - name: Check out legacy public project archive
+        uses: actions/checkout@v4
+        with:
+          repository: lcashish1/purushottam-lamichhane
+          ref: main
+          path: original
+          persist-credentials: false
+
+      - name: Import only missing files and verify bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          declare -A destinations=(
+            ["Active Directory Lab"]="active-directory"
+            ["Home Network Setup"]="office-network"
+            ["Microsoft-Sentinel-Attack-Map-Lab"]="sentinel-attack-map"
+            ["Zero Trust Azure Security with Live Threat Detection & Automated Response"]="zero-trust-azure"
+          )
+          for original_name in "${!destinations[@]}"; do
+            target_dir="website/projects/${destinations[$original_name]}"
+            mkdir -p "$target_dir"
+            while IFS= read -r -d '' source_file; do
+              relative="${source_file#original/$original_name/}"
+              target_file="$target_dir/$relative"
+              if [[ -f "$target_file" ]]; then
+                if ! cmp -s "$source_file" "$target_file"; then
+                  echo "Preserving destination edit: $target_file"
+                fi
+                continue
+              fi
+              mkdir -p "$(dirname "$target_file")"
+              cp "$source_file" "$target_file"
+              cmp "$source_file" "$target_file"
+              echo "Verified new file: $target_file"
+            done < <(find "original/$original_name" -type f -print0)
+          done
+
+      - name: Commit only new destination files
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd website
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- projects/active-directory/ projects/office-network/ projects/sentinel-attack-map/ projects/zero-trust-azure/
+          if git diff --cached --quiet; then
+            echo "All project files already exist. No changes."
+          else
+            git commit -m "Backfill missing technical portfolio project files"
+            git push origin HEAD:main
+          fi

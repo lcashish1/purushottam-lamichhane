@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+   <link rel="stylesheet" href="https://lcashish1.github.io/styles.css">
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+        <a href="https://lcashish1.github.io/index.html">Home</a>
+        <a href="https://lcashish1.github.io/new">Create Your Profile</a>
+        <a href="https://lcashish1.github.io/fl">Upload your File</a>
+        <a href="https://lcashish1.github.io/con">Contact</a>
+    </nav>
+
+
+
+    <div class="container">
+        <h1>User Information Form</h1>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+            
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone" required><br>
+            
+            <label for="sex">Sex:</label><br>
+            <select id="sex" name="sex" required>
+                <option value="">Select Sex</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br>
+            
+            <label for="nationality">Nationality:</label><br>
+            <input type="text" id="nationality" name="nationality" required><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+ <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

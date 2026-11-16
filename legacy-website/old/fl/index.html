@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+
+    <link rel="stylesheet" href="https://lcashish1.github.io/styles.css"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <nav>
+        <a href="https://lcashish1.github.io/index.html">Home</a>
+        <a href="https://lcashish1.github.io/new">Create Your Profile</a>
+        <a href="https://lcashish1.github.io/fl">Upload your File</a>
+        <a href="https://lcashish1.github.io/con">Contact</a>
+    </nav>
+
+
+    <div class="container">
+        <h2>File Upload</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileInput">Choose File:</label>
+                <input type="file" name="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" required>
+            </div>
+            <button type="submit" name="submit">Upload</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+
+ <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
